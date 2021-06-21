@@ -86,7 +86,7 @@ object SparkObj {
 					val complex_df3 = complex_df2.groupBy("address","first_name","second_name").agg(collect_list("Students").alias("Students"))
 					.select(col("Students"),col("address"),col("first_name"),col("second_name"))
 
-					println("======================= Final Complex DF ========================")
+					println("=======================Final DF========================")
 					complex_df3.show(false)
 					complex_df3.printSchema()
 	}
